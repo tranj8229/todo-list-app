@@ -181,3 +181,7 @@
   ul.todo li .buttons button.complete svg .fill {
     fill: #f5a390;
   }
+
+  ul.todo#completed:not(:empty) {
+    opacity: 0.5;
+  }
