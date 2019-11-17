@@ -17,7 +17,14 @@ function completeItem() {
   target.insertBefore(item, target.childNodes[0]);
 }
 
-// Click add button
+// Pressing enter or clicking add button prepends task item to todo list
+document.getElementById('item').addEventListener('keyup', function(event) {
+  event.preventDefault();
+  if (event.keyCode === 13) {
+    document.getElementById('add').click();
+  }
+});
+
 document.getElementById('add').addEventListener('click', function() {
   var text = document.getElementById('item').value;
   if (text) {
